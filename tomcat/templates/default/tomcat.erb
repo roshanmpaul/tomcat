@@ -1,0 +1,19 @@
+#!/bin/bash
+#description: Tomcat Start Stop Restart
+# processname: tomcat
+#chkconfig: 234 20 80
+CATALINA_HOME=/opt/apache-tomcat-7.0.55/
+
+case $1 in 
+start)
+/bin/sh /opt/apache-tomcat-7.0.55/bin/startup.sh
+;;
+stop)
+/bin/sh /opt/apache-tomcat-7.0.55/bin/shutdown.sh
+;;
+restart)
+/bin/sh /opt/apache-tomcat-7.0.55/bin/shutdown.sh
+/bin/sh /opt/apache-tomcat-7.0.55/bin/startup.sh
+::
+esac
+exit 0
